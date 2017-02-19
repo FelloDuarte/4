@@ -36,7 +36,7 @@ function setup() {
 function draw() {
 	for(var i=0; i<4;i++){
 		for (var j=0;j<6;j++){
-   		 ellipse(i*width/filas,j*height/columnas,10,10);
+   		 ellipse(offsetX+i*width/filas,offsetY+j*height/columnas,10,10);
    		 }
 	}
 
