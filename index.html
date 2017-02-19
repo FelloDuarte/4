@@ -16,8 +16,10 @@
 <script>
 
 var x, y,width,height;
-
+var filas=4;
+var columnas=6;
 function setup() {
+	
 	width=displayWidth;
 	height=displayHeight*0.8;
 	createCanvas(width, height);
@@ -32,7 +34,7 @@ function setup() {
 function draw() {
 	for(var i=0; i<4;i++){
 		for (var j=0;j<6;j++){
-   		 ellipse(100,200,10,10);
+   		 ellipse(i*width/filas,j*height/columnas,10,10);
    		 }
 	}
 
