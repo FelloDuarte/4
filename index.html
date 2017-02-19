@@ -22,7 +22,7 @@ function setup() {
 	height=displayHeight*0.8;
 	createCanvas(width, height);
 
-	background(13,23,234);
+	background(123,23,234);
 	textSize(14);
 	fill(255, 255, 255);
 	text("¡Sacude tu teléfono!", x-50, y-10);
@@ -30,22 +30,15 @@ function setup() {
 	
 	
 function draw() {
-  for(var i=0; i>4;i++){
-    for (var j=0;j<6;j++){
-    ellipse(i*width/4,j*height/6,10,10);
-    }
+	for(var i=0; i>4;i++){
+		for (var j=0;j<6;j++){
+   		 ellipse(100,200,10,10);
+   		 }
+	}
 
 }
+	
 
-}
-	
-function deviceShaken() {
-	background(random(123),random(123),random(123));
-	linea();
-	recto();
-	
-	
-}
 
 	
 
