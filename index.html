@@ -15,17 +15,17 @@
     
 <script>
 
-var x, y,width,height;
+var x, y,width,height, offsetX,offsetY;
 var filas=4;
 var columnas=6;
-var offsetX = width/filas;
-var offsetY= height/columnas;
+
 function setup() {
 	
 	width=displayWidth;
 	height=displayHeight*0.8;
 	createCanvas(width, height);
-
+	offsetX = width/filas/2;
+	offsetY= height/columnas/2;
 	background(123,23,234);
 	textSize(14);
 	fill(255, 255, 255);
