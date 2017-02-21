@@ -28,7 +28,6 @@ function setup() {
 	offsetX = width/filas/2;
 	offsetY= height/columnas/2;
 	background(20,203,34);
-	rx=map(rotationX,-180,180,-(width/filas),width/filas);
 	
 	
 }	
@@ -40,7 +39,7 @@ function draw() {
 	for(var i=0; i<4;i++){
 		for (var j=0;j<6;j++){
 		var ix =offsetX+i*width/filas;
-		rx=map(rotationX,-180,180,0,width);	
+		rx=map(rotationY,-180,180,0,width);	
 		ix = ix+(width/(rx-ix));
 		fill(i*30);
    		 ellipse(ix,offsetY+j*height/columnas,radio,radio);
