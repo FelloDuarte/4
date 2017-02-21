@@ -38,10 +38,11 @@ function draw() {
 	
 	for(var i=0; i<columnas;i++){
 		for (var j=0;j<filas;j++){
+			
 		var ix =offsetX+i*width/columnas;
-		rx=map(rotationX,-180,180,0,width);	
-		ix = ix+(width/(rx-ix));
-		fill(i*30);
+		rx=map(rotationY,-180,180,0,width);	
+		ix = width/columnas+(width/(rx-ix));
+		fill(i*30*j);
    		ellipse(ix,offsetY+j*height/filas,radio,radio);
 			
 			
