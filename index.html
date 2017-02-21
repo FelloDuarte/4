@@ -16,8 +16,8 @@
 <script>
 
 var x, y,width,height, offsetX,offsetY,rx,arx,ry,ary;
-var filas=4;
-var columnas=6;
+var filas=6;
+var columnas=4;
 var radio=20;
 
 function setup() {
@@ -25,8 +25,8 @@ function setup() {
 	width=displayWidth;
 	height=displayHeight*0.8;
 	createCanvas(width, height);
-	offsetX = width/filas/2;
-	offsetY= height/columnas/2;
+	offsetX = width/columnas/2;
+	offsetY= height/filas/2;
 	background(20,203,34);
 	
 	
@@ -36,13 +36,13 @@ function setup() {
 function draw() {
 	
 	
-	for(var i=0; i<4;i++){
-		for (var j=0;j<6;j++){
-		var jx =offsetX+j*width/filas;
+	for(var i=0; i<columnas;i++){
+		for (var j=0;j<filas;j++){
+		var ix =offsetX+i*width/columnas;
 		rx=map(rotationX,-180,180,0,width);	
-		jx = jx+(width/(rx-jx));
-		fill(j*30);
-   		ellipse(jx,offsetY+j*height/columnas,radio,radio);
+		ix = ix+(width/(rx-ix));
+		fill(i*30);
+   		ellipse(ix,offsetY+j*height/filas,radio,radio);
 			
 			
    		 }
