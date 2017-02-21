@@ -42,12 +42,12 @@ function draw() {
 		var ix =offsetX+i*width/columnas;
 		rx=map(rotationY,-180,180,0,width);
 		arx=map(rotationY,-180,180,-(width/columnas/2),width/columnas/2);
-		ix = ix+arx*(width/abs(rx-ix));
+		ix = ix+arx*(abs(rx-ix)/width);
 		
 		var jy =offsetX+j*height/filas;
 		ry=map(rotationX,-180,180,0,height);
 		ary=map(rotationX,-180,180,-(height/filas/2),height/filas/2);
-		jy = jy+ary*(height/abs(ry-jy));
+		jy = jy+ary*(abs(ry-jy)/height);
 			
 			
 		fill(i*10*j);
