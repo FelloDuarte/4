@@ -48,14 +48,14 @@ function draw() {
 			
 		
 			
-		rx=map(rotationY,-100,100,0,width);
-		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
+		rx=map(rotationY,-60,60,0,width);
+		arx=map(rotationY,-60,60,-(width/columnas),width/columnas);
 		arx=arx*(abs(rx-ix)/width);
 		
 		
 		
-		ry=map(rotationX,-100,100,0,height);
-		ary=map(rotationX,-100,100,-(height/filas),height/filas);
+		ry=map(rotationX,-100,0,0,height);
+		ary=map(rotationX,-100,0,-(height/filas),height/filas);
 		ary=ary*(abs(ry-jy)/height);	
 		
 		var ix2 = ix-arx*0.8;	
