@@ -15,9 +15,10 @@
     
 <script>
 
-var x, y,width,height, offsetX,offsetY;
+var x, y,width,height, offsetX,offsetY,r;
 var filas=4;
 var columnas=6;
+var radio=20;
 
 function setup() {
 	
@@ -26,17 +27,22 @@ function setup() {
 	createCanvas(width, height);
 	offsetX = width/filas/2;
 	offsetY= height/columnas/2;
-	background(123,23,234);
-	textSize(14);
-	fill(255, 255, 255);
-	text("¡Sacude tu teléfono!", x-50, y-10);
+	background(200,23,234);
+	var r=map(rotationX,-180,180,0.,1.);
+	
 }	
 	
 	
 function draw() {
+	textSize(14);
+	fill(255, 255, 255);
+	text(r, x-50, y-10);
+	
 	for(var i=0; i<4;i++){
 		for (var j=0;j<6;j++){
-   		 ellipse(offsetX+i*width/filas,offsetY+j*height/columnas,10,10);
+   		 ellipse(offsetX+i*width/filas,offsetY+j*height/columnas,radio,radio);
+			
+			
    		 }
 	}
 
