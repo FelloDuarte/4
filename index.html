@@ -42,6 +42,7 @@ function draw() {
 		var ix =offsetX+i*width/filas;
 		rx=map(rotationX,-180,180,0,width);	
 		ix = ix+(width/(rx-ix));
+		fill(i*30);
    		 ellipse(ix,offsetY+j*height/columnas,radio,radio);
 			
 			
