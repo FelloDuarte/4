@@ -42,7 +42,8 @@ function draw() {
 		var ix =offsetX+i*width/columnas;
 		rx=map(rotationY,-180,180,0,width);
 		arx=map(rotationY,-180,180,-(width/columnas),width/columnas);
-		ix = ix+arx*(abs(rx-ix)/width+width/abs(rx-ix))*2;
+		arx=arx*(abs(rx-ix)/width+width/abs(rx-ix));
+		ix = ix-arx;
 		
 		var jy =offsetX+j*height/filas;
 		ry=map(rotationX,-180,180,0,height);
