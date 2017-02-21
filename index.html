@@ -47,7 +47,7 @@ function draw() {
 		var jy =offsetX+j*height/filas;
 			
 		fill(230,200,230);
-		ellipse(ix,jy,width/columnas-10,height/filas-5);
+		ellipse(ix,jy,width/columnas-10,(height/filas)/2);
 			
 		rx=map(rotationY,-100,100,0,width);
 		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
@@ -63,7 +63,7 @@ function draw() {
 		
 		
 		fill(250,250,250);
-   		ellipse(ix,jy,radio*2,radio*2);
+   		ellipse(ix*0.6,jy*0.6,radio*2,radio*2);
 		fill(0,0,70);
    		ellipse(ix,jy,radio,radio);
 			
