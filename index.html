@@ -40,19 +40,19 @@ function draw() {
 		for (var j=0;j<filas;j++){
 			
 		var ix =offsetX+i*width/columnas;
-		rx=map(rotationY,-180,180,0,width);
-		arx=map(rotationY,-180,180,-(width/columnas),width/columnas);
+		rx=map(rotationY,-100,100,0,width);
+		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
 		arx=arx*(abs(rx-ix)/width)*columnas;
 		ix = ix-arx;
 		
 		var jy =offsetX+j*height/filas;
-		ry=map(rotationX,-180,180,0,height);
-		ary=map(rotationX,-180,180,-(height/filas),height/filas);
+		ry=map(rotationX,-100,100,0,height);
+		ary=map(rotationX,-100,100,-(height/filas),height/filas);
 		ary=ary*(abs(ry-jy)/height)*filas;	
 		jy = jy-ary;
 			
 		noStroke();
-		fill(random(150,200),random(50,150),random(10,20));
+		fill(random(150,250),random(0,10),random(150,200));
    		ellipse(ix,jy,radio,radio);
 			
 			
