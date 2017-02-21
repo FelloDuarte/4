@@ -36,7 +36,7 @@ function setup() {
 function draw() {
 	
 	background(0,0,70);
-	
+	noStroke();
 	for(var i=0; i<columnas;i++){
 		for (var j=0;j<filas;j++){
 			
@@ -51,17 +51,19 @@ function draw() {
 			
 		rx=map(rotationY,-100,100,0,width);
 		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
-		arx=arx*(abs(rx-ix)/width)*columnas;
+		arx=arx*(abs(rx-ix)/width);
 		ix = ix+arx;
 		
 		
 		ry=map(rotationX,-100,100,0,height);
 		ary=map(rotationX,-100,100,-(height/filas),height/filas);
-		ary=ary*(abs(ry-jy)/height)*filas;	
+		ary=ary*(abs(ry-jy)/height);	
 		jy = jy+ary;
 		
 		
-		noStroke();
+		
+		fill(250,250,250);
+   		ellipse(ix,jy,radio*2,radio*2);
 		fill(0,0,70);
    		ellipse(ix,jy,radio,radio);
 			
