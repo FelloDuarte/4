@@ -52,13 +52,13 @@ function draw() {
 		rx=map(rotationY,-100,100,0,width);
 		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
 		arx=arx*(abs(rx-ix)/width);
-		ix = ix+arx;
+		ix = ix-arx;
 		
 		
 		ry=map(rotationX,-100,100,0,height);
 		ary=map(rotationX,-100,100,-(height/filas),height/filas);
 		ary=ary*(abs(ry-jy)/height);	
-		jy = jy+ary;
+		jy = jy-ary;
 		
 		
 		
