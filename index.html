@@ -34,7 +34,7 @@ function setup() {
 	
 	
 function draw() {
-	background(20,23,234);
+	background(200,23,234);
 	
 	for(var i=0; i<columnas;i++){
 		for (var j=0;j<filas;j++){
@@ -42,7 +42,7 @@ function draw() {
 		var ix =offsetX+i*width/columnas;
 		rx=map(rotationY,-180,180,0,width);
 		arx=map(rotationY,-180,180,-(width/columnas),width/columnas);
-		arx=arx*(abs(rx-ix)/width+width/abs(rx-ix));
+		arx=arx*((abs(rx-ix)/width+width/abs(rx-ix))/2);
 		ix = ix-arx;
 		
 		var jy =offsetX+j*height/filas;
