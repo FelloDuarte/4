@@ -42,16 +42,17 @@ function draw() {
 		var ix =offsetX+i*width/columnas;
 		rx=map(rotationY,-180,180,0,width);
 		arx=map(rotationY,-180,180,-(width/columnas),width/columnas);
-		arx=arx*((abs(rx-ix)/width+width/abs(rx-ix))/2);
+		arx=arx*(abs(rx-ix)/width)*columnas;
 		ix = ix-arx;
 		
 		var jy =offsetX+j*height/filas;
 		ry=map(rotationX,-180,180,0,height);
 		ary=map(rotationX,-180,180,-(height/filas),height/filas);
-		jy = jy+ary*(abs(ry-jy)/height)*4;
+		ary=ary*(abs(ry-jy)/height)*filas;	
+		jy = jy-ary;
 			
 			
-		fill(i*10*j);
+		fill(random(150,200),random(150,200),random(150,200));
    		ellipse(ix,jy,radio,radio);
 			
 			
