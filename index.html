@@ -27,14 +27,14 @@ function setup() {
 	createCanvas(width, height);
 	offsetX = width/columnas/2;
 	offsetY= height/filas/2;
-	background(20,203,234);
+	
 	
 	
 }	
 	
 	
 function draw() {
-	
+	background(20,203,234);
 	
 	for(var i=0; i<columnas;i++){
 		for (var j=0;j<filas;j++){
@@ -43,8 +43,15 @@ function draw() {
 		rx=map(rotationY,-180,180,0,width);
 		arx=map(rotationY,-180,180,-(width/columnas/2),width/columnas/2);
 		ix = ix+arx*(width/abs(rx-ix));
+		
+		var jy =offsetX+j*height/filas;
+		ry=map(rotationX,-180,180,0,height);
+		ary=map(rotationX,-180,180,-(height/filas/2),height/filas/2);
+		jy = jy+ary*(height/abs(ry-jy));
+			
+			
 		fill(i*10*j);
-   		ellipse(ix,offsetY+j*height/filas,radio,radio);
+   		ellipse(ix,jy,radio,radio);
 			
 			
    		 }
