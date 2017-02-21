@@ -34,7 +34,7 @@ function setup() {
 	
 	
 function draw() {
-	background(200,23,234);
+	background(0,0,40);
 	
 	for(var i=0; i<columnas;i++){
 		for (var j=0;j<filas;j++){
@@ -51,7 +51,7 @@ function draw() {
 		ary=ary*(abs(ry-jy)/height)*filas;	
 		jy = jy-ary;
 			
-			
+		noStroke();
 		fill(random(150,200),random(150,200),random(150,200));
    		ellipse(ix,jy,radio,radio);
 			
