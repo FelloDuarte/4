@@ -44,19 +44,23 @@ function draw() {
 			
 			
 		var ix =offsetX+i*width/columnas;
+		var jy =offsetX+j*height/filas;
+			
+		fill(230,200,230);
+		ellipse(ix,jy,radio*4,radio*2);
+			
 		rx=map(rotationY,-100,100,0,width);
 		arx=map(rotationY,-100,100,-(width/columnas),width/columnas);
 		arx=arx*(abs(rx-ix)/width)*columnas;
 		ix = ix+arx;
 		
-		var jy =offsetX+j*height/filas;
+		
 		ry=map(rotationX,-100,100,0,height);
 		ary=map(rotationX,-100,100,-(height/filas),height/filas);
 		ary=ary*(abs(ry-jy)/height)*filas;	
 		jy = jy+ary;
 		
-		fill(230,200,230);
-		ellipse(ix,jy,radio*4,radio*2)
+		
 		noStroke();
 		fill(0,0,70);
    		ellipse(ix,jy,radio,radio);
